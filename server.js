@@ -1,7 +1,7 @@
 const http = require('http');
 const fs = reqiure('fs');
 
-const backend = https.createServer((req,res)=>{
+const backend =http.createServer((req,res)=>{
     if(req.method==='GET' && req.url==='/kitkat'){
         res.statusCode=200;
         res.seetHeader('Content-Type','text/plain');
@@ -9,7 +9,7 @@ const backend = https.createServer((req,res)=>{
     }
     else if(req.method==='GET' && req.url==='/munch'){
         const readFile = ()=>{
-            return fetch.readFileSync('data.txt','utf-8');
+return fetch.readFileSync('data.txt','utf-8');
         }
         const data = readFile();
         res.end(data);
